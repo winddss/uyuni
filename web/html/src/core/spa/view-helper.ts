@@ -16,7 +16,7 @@ const BOOTSTRAP_READY_PAGES: string[] = [
   "/rhn/systems/details/kickstart/PowerManagement.do",
   "rhn/systems/ssm/provisioning/PowerManagementOperations.do",
   "/rhn/channels/ChannelDetail.do",
-  "/rhn/software/packages/Details.do"
+  "/rhn/software/packages/Details.do",
 ];
 
 export const onEndNavigate = () => {
