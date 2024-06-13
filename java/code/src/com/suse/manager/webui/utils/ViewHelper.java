@@ -70,9 +70,9 @@ public enum ViewHelper {
         "/rhn/manager/notification-messages",
         "rhn/channels/software/Search.do",
         "/rhn/systems/details/kickstart/PowerManagement.do",
-        "rhn/systems/ssm/provisioning/PowerManagementOperations.do",
+        "/rhn/systems/ssm/provisioning/PowerManagementOperations.do",
         "/rhn/channels/ChannelDetail.do",
-        "/rhn/software/packages/Details.do"   
+        "/rhn/software/packages/Details.do"
     );
 
     ViewHelper() { }
