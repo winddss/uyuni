@@ -5,11 +5,11 @@ import { pageSize } from "core/user-preferences";
 import { Button } from "components/buttons";
 import { DeleteDialog } from "components/dialog/DeleteDialog";
 import { ModalButton } from "components/dialog/ModalButton";
+import { IconTag } from "components/icontag";
 import { Utils as MessagesUtils } from "components/messages";
 import { Column } from "components/table/Column";
 import { Table } from "components/table/Table";
 import { Toggler } from "components/toggler";
-import { IconTag } from "components/icontag";
 import { HelpLink } from "components/utils";
 
 import { Utils } from "utils/functions";
@@ -115,23 +115,23 @@ class RecurringActionsList extends React.Component<Props, State> {
           {t(" Recurring Actions ")}
           <HelpLink url="reference/schedule/recurring-actions.html" />
         </h1>
-        <p>{
-          <>
-            <p>{t("The following recurring actions have been created.")}</p>
-            {disableCreate ? (
-              <p>
-                {t(
-                  "To create new recurring actions head to the system, group or organization you want to create the action for."
-                )}
-              </p>
-            ) : null}
-          </>
-        }</p>
+        <p>
+          {
+            <>
+              <p>{t("The following recurring actions have been created.")}</p>
+              {disableCreate ? (
+                <p>
+                  {t(
+                    "To create new recurring actions head to the system, group or organization you want to create the action for."
+                  )}
+                </p>
+              ) : null}
+            </>
+          }
+        </p>
         {/* We only want to display the help icon in the 'Schedule > Recurring Actions' page so we use disableCreate as */}
         {/* an indicator whether we currently render this page */}
-        <div className="pull-right btn-group">
-          {disableCreate ? [] : buttons}
-        </div>
+        <div className="pull-right btn-group">{disableCreate ? [] : buttons}</div>
         <h3>Schedules</h3>
         <Table
           selectable={false}

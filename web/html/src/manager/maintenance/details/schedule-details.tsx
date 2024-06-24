@@ -6,6 +6,7 @@ import { WebCalendar } from "manager/maintenance/calendar/web-calendar";
 import { AsyncButton } from "components/buttons";
 import { DeleteDialog } from "components/dialog/DeleteDialog";
 import { ModalButton } from "components/dialog/ModalButton";
+import { IconTag } from "components/icontag";
 import { SystemLink } from "components/links";
 import { Utils as MessagesUtils } from "components/messages";
 import { MessageType } from "components/messages";
@@ -15,7 +16,6 @@ import { Column } from "components/table/Column";
 import { SearchField } from "components/table/SearchField";
 import { Table } from "components/table/Table";
 import { Toggler } from "components/toggler";
-import { IconTag } from "components/icontag";
 
 import Network from "utils/network";
 
@@ -187,7 +187,12 @@ const SystemPicker = (props: SystemPickerProps) => {
                 disabled={!hasChanges}
               />
             ) : (
-              <AsyncButton action={onAssign} defaultType="btn-success" text={t("Save Changes")} disabled={!hasChanges} />
+              <AsyncButton
+                action={onAssign}
+                defaultType="btn-success"
+                text={t("Save Changes")}
+                disabled={!hasChanges}
+              />
             ),
           ]}
         </div>

@@ -8,7 +8,6 @@ import { HelpLink } from "components/utils";
 import MaintenanceCalendarList from "./calendar-list";
 import MaintenanceScheduleList from "./schedule-list";
 
-
 type MaintenanceListProps = {
   type: "schedule" | "calendar";
   data: any[];
@@ -43,17 +42,13 @@ const MaintenanceWindowsList = (props: MaintenanceListProps) => {
           <HelpLink url="reference/schedule/maintenance-windows.html" />
         </h1>
         <p>
-          {
-            type === "schedule"
-              ? t("Below is a list of Maintenance Schedules available to the current user.")
-              : t("Below is a list of Maintenance Calendars available to the current user.")
-          }
+          {type === "schedule"
+            ? t("Below is a list of Maintenance Schedules available to the current user.")
+            : t("Below is a list of Maintenance Calendars available to the current user.")}
         </p>
-        <div className="pull-right btn-group">
-          {buttons}
-        </div>
+        <div className="pull-right btn-group">{buttons}</div>
         <h3>{t(type === "schedule" ? "Schedules" : "Calendars")}</h3>
-        
+
         {(type === "schedule" && (
           <MaintenanceScheduleList
             data={props.data}
