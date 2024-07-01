@@ -171,7 +171,7 @@ const SystemPicker = (props: SystemPickerProps) => {
         {t("Assigned Systems")}
       </h2>
       <div className="clearfix mb-3">
-        <div className=" pull-right btn-group">
+        <div className="pull-right btn-group">
           {[
             <Toggler
               text={t("Cancel affected actions")}
