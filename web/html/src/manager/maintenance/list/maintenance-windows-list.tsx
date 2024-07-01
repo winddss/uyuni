@@ -38,7 +38,7 @@ const MaintenanceWindowsList = (props: MaintenanceListProps) => {
       <>
         <h1>
           <IconTag type="header-schedule" />
-          {t("Maintenance") + " " + (type === "schedule" ? t("Schedules ") : t("Calendars "))}
+          {type === "schedule" ? t("Maintenance Schedules") : t("Maintenance Calendars")}
           <HelpLink url="reference/schedule/maintenance-windows.html" />
         </h1>
         <p>
