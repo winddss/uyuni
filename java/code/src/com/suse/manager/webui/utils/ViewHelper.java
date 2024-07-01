@@ -69,7 +69,7 @@ public enum ViewHelper {
         "/rhn/multiorg/OrgConfigDetails.do",
         "/rhn/manager/notification-messages",
         "rhn/channels/software/Search.do",
-        "/rhn/manager/schedule/maintenance/schedules#/create"
+        "/rhn/manager/schedule/maintenance/schedules"
     );
 
     ViewHelper() { }
